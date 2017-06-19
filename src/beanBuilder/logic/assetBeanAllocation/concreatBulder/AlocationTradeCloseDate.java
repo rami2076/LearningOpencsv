@@ -2,6 +2,7 @@ package beanBuilder.logic.assetBeanAllocation.concreatBulder;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
 
 import beanBuilder.logic.assetBeanAllocation.abstructBuilder.AlocationInterface;
 import beanBuilder.logic.assetBeanAllocation.buildInfo.AlocationParent;
@@ -16,7 +17,7 @@ public class AlocationTradeCloseDate extends AlocationParent implements Alocatio
 
 
 
-	protected LocalDateTime TradeEndTime;
+	protected LocalDateTime tradeDateTimeClose;
 	private static final String  FORMAT_PATTERN = "yyyy.mm.dd-hh:mm";
 	private static final DateTimeFormatter DATE_PATTERN = DateTimeFormatter.ofPattern(FORMAT_PATTERN);
 
@@ -25,26 +26,26 @@ public class AlocationTradeCloseDate extends AlocationParent implements Alocatio
 
 	@Override
 	public String valid(String inputDate ) {
-		//TODO 基準設定すること
-		if ("".equals(inputDate)){
-			//TODO Implement append!!
-			errorMassage = errorMassage + "";
+		try{
+		LocalDateTime.parse(inputDate,DATE_PATTERN);
+		}catch(DateTimeParseException e){
+			//もし、データの登録ができなかった場合外部のログデータに吐き出すようにする。
+			//TODO::外部にデータを書きす。
+			errorMassage = errorMassage +  "不正な日時が入力されているため、"+ inputDate + "の取引を登録できませんでした。";
+			return errorMassage;
 		}
 		return errorMassage;
 	}
 
 	@Override
 	public void parseAndSet(String inputDate) {
-		TradeEndTime = LocalDateTime.parse(inputDate,DATE_PATTERN);
-
+		tradeDateTimeClose = LocalDateTime.parse(inputDate,DATE_PATTERN);
+		bean.setTradeDateTimeClose(tradeDateTimeClose);
 	}
-
-
 
 	@Override
 	public AssetMember getbean() {
-		// TODO 自動生成されたメソッド・スタブ
-		return null;
+		return bean;
 	}
 
 

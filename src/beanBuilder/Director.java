@@ -37,6 +37,8 @@ public class Director {
 	//tradeOpenDate								取引開始時間					2016/7/27 21:55,			190
 	//tradeEndDate									取引終了時間					2016/7/27 21:58				200
 
+
+	//TODO:: enumの使ってswichの切替を実装したいが出来ていないのが現状誰かに質問すること
 	private enum category{
 		propetyNumber,
 		pair,
@@ -51,7 +53,9 @@ public class Director {
 		tradeEndDate;
 	}
 
-private static final Integer
+
+	//switchの切替時に使用しようかと思っていたがstateパターンを使うまでもないため素のintegerで実装しようか迷い中。
+private static final int
 	PROPERTY_NUMBER =100,
 	PAIR = 110,
 	ASSET_RULE= 120,
@@ -66,6 +70,15 @@ private static final Integer
 private static AlocationInterface type = null;
 private static String errorMassage =errorMassage ="";
 
+
+
+
+/**
+ * 仮のメインメソッド。
+ * 完成後移行させる予定。
+ * 現在はbeanBuilderの作成中。
+ * @param args
+ */
 public static void main(String[]  args){
 getArray();
 }
@@ -88,50 +101,47 @@ getArray();
 		AssetmemberCollection.add(bean);
 			}
 		}
-
+//getState()メソッドを作成し、作成しないBeanは弾くプログラムを作成したほうがKISSであるか。。。
 	public static void setType( AssetMember bean,Integer cat ){
 		switch(cat){
-		case 0:
+		case PROPERTY_NUMBER:
 			 type = new AlocationTypePropetyNumber(bean,errorMassage);
 			break;
-		case 1:
+		case PAIR:
 			 type = new AlocationTypePair(bean,errorMassage);
 			break;
-		case 2:
+		case ASSET_RULE:
 			 type = new AlocationTypeAssetRule(bean,errorMassage);
 			break;
-		case 3:
+		case DIRECTION:
 			type = new AlocationTypeDirection(bean,errorMassage);
 			break;
-		case 4:
+		case RATE_BIGIN:
 			type = new AlocationTypeRateBigin(bean,errorMassage);
 			break;
-		case 5:
+		case TRADE_STATUS:
 			type = new AlocationTypeTradeStatus(bean,errorMassage);
 			break;
-		case 6:
-			type = new AlocationtypeRateEnd(bean,errorMassage);
-			break;
-
-		case 7:
+		case BET:
 			type = new AlocationTypeBet(bean,errorMassage);
 			break;
-		case 8:
+		case PAYOUT:
 			type = new AlocationTypePayout(bean,errorMassage);
 			break;
-		case 10:
+		case RATE_END:
 			type = new AlocationtypeRateEnd(bean,errorMassage);
 			break;
-		case 9:
+		case TRADE_OPEN_DATE:
 			type = new AlocationTypeTradeOpenDate(bean,errorMassage);
 			break;
-		case 11:
+		case TRADE_CLOSE_DATE:
 			type = new AlocationTradeCloseDate(bean,errorMassage);
 			break;
-
 		}
+	}
+	//実装予定はあるが、主機能でないため後回し。
+	public static void	setState(){
 
 	}
-
 
 }
