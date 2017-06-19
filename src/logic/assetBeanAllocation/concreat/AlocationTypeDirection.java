@@ -1,15 +1,16 @@
-package logic.assetBeanAllocation;
+package logic.assetBeanAllocation.concreat;
 
 import beans.AssetMember;
 import logic.assetBeanAllocation.Interface.AlocationInterface;
 import logic.assetBeanAllocation.parent.AlocationParent;
 
-public class AlocationTypeBet extends AlocationParent implements AlocationInterface {
+public class AlocationTypeDirection extends AlocationParent implements  AlocationInterface {
 
-	public AlocationTypeBet(AssetMember bean, String errorMassage) {
+	public AlocationTypeDirection(AssetMember bean, String errorMassage) {
 		super(bean, errorMassage);
-		// TODO 自動生成されたコンストラクター・スタブ
 	}
+
+
 
 	@Override
 	public String valid(String inputDate) {

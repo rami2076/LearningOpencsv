@@ -1,4 +1,4 @@
-package logic.assetBeanAllocation;
+package logic.assetBeanAllocation.concreat;
 
 import beans.AssetMember;
 import logic.assetBeanAllocation.Interface.AlocationInterface;

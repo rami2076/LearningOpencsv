@@ -1,13 +1,14 @@
-package logic.assetBeanAllocation;
+package logic.assetBeanAllocation.concreat;
 
 import beans.AssetMember;
 import logic.assetBeanAllocation.Interface.AlocationInterface;
 import logic.assetBeanAllocation.parent.AlocationParent;
 
-public class AlocationTypePair extends AlocationParent implements AlocationInterface {
+public class AlocationTypeTradeStatus extends AlocationParent implements AlocationInterface {
 
-	public AlocationTypePair(AssetMember bean, String errorMassage) {
+	public AlocationTypeTradeStatus(AssetMember bean, String errorMassage) {
 		super(bean, errorMassage);
+		// TODO 自動生成されたコンストラクター・スタブ
 	}
 
 	@Override

@@ -1,19 +1,15 @@
-package logic.assetBeanAllocation;
+package logic.assetBeanAllocation.concreat;
 
 import beans.AssetMember;
 import logic.assetBeanAllocation.Interface.AlocationInterface;
 import logic.assetBeanAllocation.parent.AlocationParent;
 
-public class AlocationTypeAssetRule extends AlocationParent implements  AlocationInterface{
+public class AlocationTypePayout extends AlocationParent implements  AlocationInterface{
 
-
-
-	public AlocationTypeAssetRule(AssetMember bean, String errorMassage) {
+	public AlocationTypePayout(AssetMember bean, String errorMassage) {
 		super(bean, errorMassage);
 		// TODO 自動生成されたコンストラクター・スタブ
 	}
-
-
 
 	@Override
 	public String valid(String inputDate) {
@@ -32,4 +28,5 @@ public class AlocationTypeAssetRule extends AlocationParent implements  Alocatio
 		// TODO 自動生成されたメソッド・スタブ
 		return null;
 	}
+
 }

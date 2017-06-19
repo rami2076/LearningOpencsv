@@ -1,16 +1,14 @@
-package logic.assetBeanAllocation;
+package logic.assetBeanAllocation.concreat;
 
 import beans.AssetMember;
 import logic.assetBeanAllocation.Interface.AlocationInterface;
 import logic.assetBeanAllocation.parent.AlocationParent;
 
-public class AlocationTypeDirection extends AlocationParent implements  AlocationInterface {
+public class AlocationTypePair extends AlocationParent implements AlocationInterface {
 
-	public AlocationTypeDirection(AssetMember bean, String errorMassage) {
+	public AlocationTypePair(AssetMember bean, String errorMassage) {
 		super(bean, errorMassage);
 	}
-
-
 
 	@Override
 	public String valid(String inputDate) {

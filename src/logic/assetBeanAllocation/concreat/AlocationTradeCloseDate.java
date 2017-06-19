@@ -1,4 +1,4 @@
-package logic.assetBeanAllocation;
+package logic.assetBeanAllocation.concreat;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;

@@ -1,12 +1,12 @@
-package logic.assetBeanAllocation;
+package logic.assetBeanAllocation.concreat;
 
 import beans.AssetMember;
 import logic.assetBeanAllocation.Interface.AlocationInterface;
 import logic.assetBeanAllocation.parent.AlocationParent;
 
-public class AlocationTypePayout extends AlocationParent implements  AlocationInterface{
+public class AlocationTypeBet extends AlocationParent implements AlocationInterface {
 
-	public AlocationTypePayout(AssetMember bean, String errorMassage) {
+	public AlocationTypeBet(AssetMember bean, String errorMassage) {
 		super(bean, errorMassage);
 		// TODO 自動生成されたコンストラクター・スタブ
 	}
