@@ -1,4 +1,4 @@
-package logic.assetBeanAllocation.parent;
+package beanBuilder.logic.assetBeanAllocation.buildInfo;
 
 import beans.AssetMember;
 

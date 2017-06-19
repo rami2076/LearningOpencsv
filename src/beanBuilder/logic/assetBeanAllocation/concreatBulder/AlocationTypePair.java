@@ -1,8 +1,8 @@
-package logic.assetBeanAllocation.concreat;
+package beanBuilder.logic.assetBeanAllocation.concreatBulder;
 
+import beanBuilder.logic.assetBeanAllocation.abstructBuilder.AlocationInterface;
+import beanBuilder.logic.assetBeanAllocation.buildInfo.AlocationParent;
 import beans.AssetMember;
-import logic.assetBeanAllocation.Interface.AlocationInterface;
-import logic.assetBeanAllocation.parent.AlocationParent;
 
 public class AlocationTypePair extends AlocationParent implements AlocationInterface {
 

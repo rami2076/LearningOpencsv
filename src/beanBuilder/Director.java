@@ -1,24 +1,24 @@
-package app;
+package beanBuilder;
 
 import java.io.File;
 import java.util.ArrayList;
 
+import beanBuilder.logic.assetBeanAllocation.abstructBuilder.AlocationInterface;
+import beanBuilder.logic.assetBeanAllocation.concreatBulder.AlocationTradeCloseDate;
+import beanBuilder.logic.assetBeanAllocation.concreatBulder.AlocationTypeAssetRule;
+import beanBuilder.logic.assetBeanAllocation.concreatBulder.AlocationTypeBet;
+import beanBuilder.logic.assetBeanAllocation.concreatBulder.AlocationTypeDirection;
+import beanBuilder.logic.assetBeanAllocation.concreatBulder.AlocationTypePair;
+import beanBuilder.logic.assetBeanAllocation.concreatBulder.AlocationTypePayout;
+import beanBuilder.logic.assetBeanAllocation.concreatBulder.AlocationTypePropetyNumber;
+import beanBuilder.logic.assetBeanAllocation.concreatBulder.AlocationTypeRateBigin;
+import beanBuilder.logic.assetBeanAllocation.concreatBulder.AlocationTypeTradeOpenDate;
+import beanBuilder.logic.assetBeanAllocation.concreatBulder.AlocationTypeTradeStatus;
+import beanBuilder.logic.assetBeanAllocation.concreatBulder.AlocationtypeRateEnd;
 import beans.AssetMember;
-import logic.assetBeanAllocation.Interface.AlocationInterface;
-import logic.assetBeanAllocation.concreat.AlocationTradeCloseDate;
-import logic.assetBeanAllocation.concreat.AlocationTypeAssetRule;
-import logic.assetBeanAllocation.concreat.AlocationTypeBet;
-import logic.assetBeanAllocation.concreat.AlocationTypeDirection;
-import logic.assetBeanAllocation.concreat.AlocationTypePair;
-import logic.assetBeanAllocation.concreat.AlocationTypePayout;
-import logic.assetBeanAllocation.concreat.AlocationTypePropetyNumber;
-import logic.assetBeanAllocation.concreat.AlocationTypeRateBigin;
-import logic.assetBeanAllocation.concreat.AlocationTypeTradeOpenDate;
-import logic.assetBeanAllocation.concreat.AlocationTypeTradeStatus;
-import logic.assetBeanAllocation.concreat.AlocationtypeRateEnd;
 import parser.ParseCSV;
 
-public class MyApp {
+public class Director {
 	private static	AssetMember one = new AssetMember();
 	private final static Integer PROPETY_NUMBER = 1;
 	private final  static	String folderPathName = "C:\\Users\\nyx\\Desktop\\asset\\";

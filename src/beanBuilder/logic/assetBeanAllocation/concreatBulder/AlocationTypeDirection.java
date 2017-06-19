@@ -1,14 +1,16 @@
-package logic.assetBeanAllocation.concreat;
+package beanBuilder.logic.assetBeanAllocation.concreatBulder;
 
+import beanBuilder.logic.assetBeanAllocation.abstructBuilder.AlocationInterface;
+import beanBuilder.logic.assetBeanAllocation.buildInfo.AlocationParent;
 import beans.AssetMember;
-import logic.assetBeanAllocation.Interface.AlocationInterface;
-import logic.assetBeanAllocation.parent.AlocationParent;
 
-public class AlocationTypePropetyNumber extends AlocationParent implements AlocationInterface {
+public class AlocationTypeDirection extends AlocationParent implements  AlocationInterface {
 
-	public AlocationTypePropetyNumber(AssetMember bean, String errorMassage) {
+	public AlocationTypeDirection(AssetMember bean, String errorMassage) {
 		super(bean, errorMassage);
 	}
+
+
 
 	@Override
 	public String valid(String inputDate) {
@@ -27,8 +29,5 @@ public class AlocationTypePropetyNumber extends AlocationParent implements Aloca
 		// TODO 自動生成されたメソッド・スタブ
 		return null;
 	}
-
-
-	
 
 }
