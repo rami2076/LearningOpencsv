@@ -1,13 +1,14 @@
-package logic.assetBeanAllocation;
+package beanBuilder.logic.assetBeanAllocation.concreatBulder;
 
+import beanBuilder.logic.assetBeanAllocation.abstructBuilder.AlocationInterface;
+import beanBuilder.logic.assetBeanAllocation.buildInfo.AlocationParent;
 import beans.AssetMember;
-import logic.assetBeanAllocation.Interface.AlocationInterface;
-import logic.assetBeanAllocation.parent.AlocationParent;
 
-public class AlocationTypePropetyNumber extends AlocationParent implements AlocationInterface {
+public class AlocationTypeRateBigin extends AlocationParent implements AlocationInterface {
 
-	public AlocationTypePropetyNumber(AssetMember bean, String errorMassage) {
+	public AlocationTypeRateBigin(AssetMember bean, String errorMassage) {
 		super(bean, errorMassage);
+
 	}
 
 	@Override
@@ -27,8 +28,5 @@ public class AlocationTypePropetyNumber extends AlocationParent implements Aloca
 		// TODO 自動生成されたメソッド・スタブ
 		return null;
 	}
-
-
-	
 
 }

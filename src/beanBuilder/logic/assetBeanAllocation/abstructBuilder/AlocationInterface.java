@@ -1,4 +1,4 @@
-package logic.assetBeanAllocation.Interface;
+package beanBuilder.logic.assetBeanAllocation.abstructBuilder;
 
 import beans.AssetMember;
 //

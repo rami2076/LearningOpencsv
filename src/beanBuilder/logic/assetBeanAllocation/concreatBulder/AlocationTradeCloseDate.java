@@ -1,11 +1,11 @@
-package logic.assetBeanAllocation;
+package beanBuilder.logic.assetBeanAllocation.concreatBulder;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
+import beanBuilder.logic.assetBeanAllocation.abstructBuilder.AlocationInterface;
+import beanBuilder.logic.assetBeanAllocation.buildInfo.AlocationParent;
 import beans.AssetMember;
-import logic.assetBeanAllocation.Interface.AlocationInterface;
-import logic.assetBeanAllocation.parent.AlocationParent;
 
 public class AlocationTradeCloseDate extends AlocationParent implements AlocationInterface  {
 
@@ -36,7 +36,7 @@ public class AlocationTradeCloseDate extends AlocationParent implements Alocatio
 	@Override
 	public void parseAndSet(String inputDate) {
 		TradeEndTime = LocalDateTime.parse(inputDate,DATE_PATTERN);
-		
+
 	}
 
 

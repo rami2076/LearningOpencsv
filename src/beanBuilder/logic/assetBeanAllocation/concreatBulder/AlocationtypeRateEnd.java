@@ -1,14 +1,14 @@
-package logic.assetBeanAllocation;
+package beanBuilder.logic.assetBeanAllocation.concreatBulder;
 
+import beanBuilder.logic.assetBeanAllocation.abstructBuilder.AlocationInterface;
+import beanBuilder.logic.assetBeanAllocation.buildInfo.AlocationParent;
 import beans.AssetMember;
-import logic.assetBeanAllocation.Interface.AlocationInterface;
-import logic.assetBeanAllocation.parent.AlocationParent;
 
-public class AlocationTypeRateBigin extends AlocationParent implements AlocationInterface {
+public class AlocationtypeRateEnd extends AlocationParent implements   AlocationInterface {
 
-	public AlocationTypeRateBigin(AssetMember bean, String errorMassage) {
+	public AlocationtypeRateEnd(AssetMember bean, String errorMassage) {
 		super(bean, errorMassage);
-
+		// TODO 自動生成されたコンストラクター・スタブ
 	}
 
 	@Override
