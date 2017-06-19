@@ -10,13 +10,16 @@ public class AlocationTypeAssetRule extends AlocationParent implements  Alocatio
 
 	public AlocationTypeAssetRule(AssetMember bean, String errorMassage) {
 		super(bean, errorMassage);
-		// TODO 自動生成されたコンストラクター・スタブ
 	}
 
 
 
 	@Override
 	public String valid(String inputDate) {
+		//turbo
+		 //HighLow
+		//上の文字列のバイト数まで入ることが決定している。
+
 		// TODO 自動生成されたメソッド・スタブ
 		return null;
 	}
