@@ -4,5 +4,6 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
 	<classpathentry kind="lib" path="C:/Users/nyx/Documents/JavaFXOutSourceLibriry/opencsv-3.9.jar"/>
 	<classpathentry kind="lib" path="C:/Users/nyx/Documents/JavaFXOutSourceLibriry/commons-lang3-3.5/commons-lang3-3.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/nyx/Documents/JavaFXOutSourceLibriry/lombok.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

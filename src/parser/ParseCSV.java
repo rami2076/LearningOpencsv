@@ -21,20 +21,22 @@ public class ParseCSV {
 
 		} catch (Exception e) {
 			e.printStackTrace();
-			 throw new RuntimeException(e);
+			throw new RuntimeException(e);
 		}
 	}
-public   List<AssetMember> opencsvToBean(File file){
- try{
-	 CSVReader reader = new CSVReader(new InputStreamReader(new FileInputStream(file), "SJIS"), ',', '"', 1);
-	 ColumnPositionMappingStrategy<AssetMember> start = new ColumnPositionMappingStrategy<>();
-	 start.setType(AssetMember.class);
-	 start.setColumnMapping(HEADER);
-	 CsvToBean<AssetMember >  csv = new CsvToBean<AssetMember>();
-	 return csv.parse(start,reader);
- }catch(Exception e){
-	 e.printStackTrace();
-	 throw new RuntimeException(e);
- }
-}
+	public   List<AssetMember> opencsvToBean(File file){
+		try{
+			CSVReader reader = new CSVReader(new InputStreamReader(new FileInputStream(file), "SJIS"), ',', '"', 1);
+			ColumnPositionMappingStrategy<AssetMember> start = new ColumnPositionMappingStrategy<>();
+			start.setType(AssetMember.class);
+			start.setColumnMapping(HEADER);
+			CsvToBean<AssetMember >  csv = new CsvToBean<AssetMember>();
+			return csv.parse(start,reader);
+		}catch(Exception e){
+			e.printStackTrace();
+			throw new RuntimeException(e);
+		}
+	}
+
+
 }
