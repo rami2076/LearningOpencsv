@@ -10,13 +10,13 @@ public class AssetMember {
 	//87955046,AUD/JPY,turbo-spread,HIGH,87.209,取引終了,"\1,004","\2,008",87.216,2017/2/23 23:09,2017/2/23 23:09
 	@Setter
 	@Getter
-	private String   pair,option,direction,tradeStatus;
+	private String   pair,assetRule,option,direction,tradeStatus;
 @Setter
 @Getter
 	private String propetyNumber;
 @Setter
 @Getter
-	private int payout ,bet;
+	private Long payout ,bet;
 @Setter
 @Getter
 	private double biginRate,endRate;

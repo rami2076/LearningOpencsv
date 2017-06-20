@@ -1,19 +1,18 @@
-package beanBuilder.logic.assetBeanAllocation.concreatBulder;
+package beanBuilder.logic.assetBeanAllocation.beanBulder;
 
 import beanBuilder.logic.assetBeanAllocation.abstructBuilder.AlocationInterface;
 import beanBuilder.logic.assetBeanAllocation.buildInfo.AlocationParent;
 import beans.AssetMember;
 
-public class AlocationTypeDirection extends AlocationParent implements  AlocationInterface {
+public class AlocationtypeRateEnd extends AlocationParent implements   AlocationInterface {
 
-	public AlocationTypeDirection(AssetMember bean, String errorMassage) {
+	public AlocationtypeRateEnd(AssetMember bean, StringBuilder errorMassage) {
 		super(bean, errorMassage);
+		// TODO 自動生成されたコンストラクター・スタブ
 	}
 
-
-
 	@Override
-	public String valid(String inputDate) {
+	public StringBuilder valid(String inputDate) {
 		// TODO 自動生成されたメソッド・スタブ
 		return null;
 	}

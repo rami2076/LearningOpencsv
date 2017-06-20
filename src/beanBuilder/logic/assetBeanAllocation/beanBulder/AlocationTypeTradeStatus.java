@@ -1,4 +1,4 @@
-package beanBuilder.logic.assetBeanAllocation.concreatBulder;
+package beanBuilder.logic.assetBeanAllocation.beanBulder;
 
 import beanBuilder.logic.assetBeanAllocation.abstructBuilder.AlocationInterface;
 import beanBuilder.logic.assetBeanAllocation.buildInfo.AlocationParent;
@@ -6,13 +6,13 @@ import beans.AssetMember;
 
 public class AlocationTypeTradeStatus extends AlocationParent implements AlocationInterface {
 
-	public AlocationTypeTradeStatus(AssetMember bean, String errorMassage) {
+	public AlocationTypeTradeStatus(AssetMember bean, StringBuilder errorMassage) {
 		super(bean, errorMassage);
 		// TODO 自動生成されたコンストラクター・スタブ
 	}
 
 	@Override
-	public String valid(String inputDate) {
+	public StringBuilder valid(String inputDate) {
 		// TODO 自動生成されたメソッド・スタブ
 		return null;
 	}
