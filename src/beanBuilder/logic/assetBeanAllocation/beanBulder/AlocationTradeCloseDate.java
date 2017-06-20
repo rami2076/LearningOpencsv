@@ -1,4 +1,4 @@
-package beanBuilder.logic.assetBeanAllocation.concreatBulder;
+package beanBuilder.logic.assetBeanAllocation.beanBulder;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -11,7 +11,7 @@ import beans.AssetMember;
 public class AlocationTradeCloseDate extends AlocationParent implements AlocationInterface  {
 
 
-	public AlocationTradeCloseDate(AssetMember bean, String errorMassage) {
+	public AlocationTradeCloseDate(AssetMember bean, StringBuilder errorMassage) {
 		super(bean, errorMassage);
 	}
 
@@ -25,13 +25,15 @@ public class AlocationTradeCloseDate extends AlocationParent implements Alocatio
 
 
 	@Override
-	public String valid(String inputDate ) {
+	public StringBuilder valid(String inputDate ) {
 		try{
 		LocalDateTime.parse(inputDate,DATE_PATTERN);
 		}catch(DateTimeParseException e){
 			//もし、データの登録ができなかった場合外部のログデータに吐き出すようにする。
 			//TODO::外部にデータを書きす。
-			errorMassage = errorMassage +  "不正な日時が入力されているため、"+ inputDate + "の取引を登録できませんでした。";
+
+			errorMassage = errorMassage
+					.append ( "不正な日時が入力されているため、").append( inputDate).append( "の取引を登録できませんでした。");
 			return errorMassage;
 		}
 		return errorMassage;

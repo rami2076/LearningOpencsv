@@ -4,17 +4,17 @@ import java.io.File;
 import java.util.ArrayList;
 
 import beanBuilder.logic.assetBeanAllocation.abstructBuilder.AlocationInterface;
-import beanBuilder.logic.assetBeanAllocation.concreatBulder.AlocationTradeCloseDate;
-import beanBuilder.logic.assetBeanAllocation.concreatBulder.AlocationTypeAssetRule;
-import beanBuilder.logic.assetBeanAllocation.concreatBulder.AlocationTypeBet;
-import beanBuilder.logic.assetBeanAllocation.concreatBulder.AlocationTypeDirection;
-import beanBuilder.logic.assetBeanAllocation.concreatBulder.AlocationTypePair;
-import beanBuilder.logic.assetBeanAllocation.concreatBulder.AlocationTypePayout;
-import beanBuilder.logic.assetBeanAllocation.concreatBulder.AlocationTypePropetyNumber;
-import beanBuilder.logic.assetBeanAllocation.concreatBulder.AlocationTypeRateBigin;
-import beanBuilder.logic.assetBeanAllocation.concreatBulder.AlocationTypeTradeOpenDate;
-import beanBuilder.logic.assetBeanAllocation.concreatBulder.AlocationTypeTradeStatus;
-import beanBuilder.logic.assetBeanAllocation.concreatBulder.AlocationtypeRateEnd;
+import beanBuilder.logic.assetBeanAllocation.beanBulder.AlocationTradeCloseDate;
+import beanBuilder.logic.assetBeanAllocation.beanBulder.AlocationTypeAssetRule;
+import beanBuilder.logic.assetBeanAllocation.beanBulder.AlocationTypeBet;
+import beanBuilder.logic.assetBeanAllocation.beanBulder.AlocationTypeDirection;
+import beanBuilder.logic.assetBeanAllocation.beanBulder.AlocationTypePair;
+import beanBuilder.logic.assetBeanAllocation.beanBulder.AlocationTypePayout;
+import beanBuilder.logic.assetBeanAllocation.beanBulder.AlocationTypePropetyNumber;
+import beanBuilder.logic.assetBeanAllocation.beanBulder.AlocationTypeRateBigin;
+import beanBuilder.logic.assetBeanAllocation.beanBulder.AlocationTypeTradeOpenDate;
+import beanBuilder.logic.assetBeanAllocation.beanBulder.AlocationTypeTradeStatus;
+import beanBuilder.logic.assetBeanAllocation.beanBulder.AlocationtypeRateEnd;
 import beans.AssetMember;
 import parser.ParseCSV;
 
@@ -68,7 +68,10 @@ private static final int
 	TRADE_OPEN_DATE = 190,
 	TRADE_CLOSE_DATE = 200;
 private static AlocationInterface type = null;
-private static String errorMassage =errorMassage ="";
+private static StringBuilder errorMassage ;
+{
+	errorMassage = new StringBuilder();
+}
 
 
 

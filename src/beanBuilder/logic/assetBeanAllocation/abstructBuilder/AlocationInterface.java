@@ -14,11 +14,11 @@ import beans.AssetMember;
 //tradeOpenDate								取引開始時間					2016/7/27 21:55,			190
 //tradeEndDate									取引終了時間					2016/7/27 21:58				200
 public interface AlocationInterface  {
-	public abstract String valid(String inputDate);
+	public abstract StringBuilder valid(String inputDate);
 
 	public  abstract  void  parseAndSet(String inputDate);
 
-	//public abstract void init(AssetMember bean);
-
 	public abstract AssetMember getbean();
+
+	//public abstract  T getSQL(T inpuDate);
 }
